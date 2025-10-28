@@ -4,7 +4,7 @@
 
 __Windows__  
 
-We recommend installing Python and GDAL from
+We recommend installing Python, GDAL and QGIS from
 [OSGeo4W](https://trac.osgeo.org/osgeo4w/). If you have OSGeo4W
 and GDAL installed but just need the extra Python tools you can rerun the following method.
 
@@ -20,7 +20,7 @@ Run `osgeo4w-setup.exe`, located by default in `C:\OSGeo4W\bin`.
   should look like e.g. "gdal 3.11.3" (Note the version number on
   your system is likely to be different). We will need the version
   number of your GDAL installation in a later step.
-- (If you have gdal already installed the version number can be checked with the command `gdalinfo --version` from the OSGEO4W shell)
+- (If you have GDAL already installed the version number can be checked with the command `gdalinfo --version` from the OSGEO4W shell)
 - Enter the Advanced section.
 - Choose `python3-gdal` and `python3-gdal-dev` from the advanced section and swap
   from "skip" to "keep".

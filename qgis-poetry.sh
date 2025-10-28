@@ -17,7 +17,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$SCRIPT_DIR"
 
 # Get Poetry virtual environment path
-VENV_PATH="$PROJECT_DIR/.venv"
+#VENV_PATH="$PROJECT_DIR/.venv"
+VENV_PATH=$(cd "$PROJECT_DIR" && poetry env info --path 2>/dev/null)
 
 if [ -z "$VENV_PATH" ]; then
     echo "Error: Could not find Poetry virtualenv for project at $PROJECT_DIR"
