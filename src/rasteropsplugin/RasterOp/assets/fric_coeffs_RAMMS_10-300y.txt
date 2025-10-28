@@ -1,0 +1,237 @@
+# Table of friction parameters from RAMMS, T = 10–300 years
+# ---------------------------------------------------------
+#
+# Return period T = 10 y
+#
+#   Tiny avalanches        (V < 5000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.295, 0.00654]    [0.285, 0.00613]    [0.275, 0.00561]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.330, 0.00785]    [0.305, 0.00701]    [0.290, 0.00654]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.370, 0.00934]    [0.355, 0.00831]    [0.340, 0.00785]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.470, 0.01090]    [0.460, 0.00981]    [0.450, 0.00934]
+#
+#   Small avalanches       (5000 m3 <= V < 25000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.270, 0.00491]    [0.255, 0.00436]    [0.240, 0.00392]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.295, 0.00654]    [0.275, 0.00561]    [0.260, 0.00491]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.340, 0.00818]    [0.325, 0.00727]    [0.310, 0.00654]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.430, 0.00981]    [0.410, 0.00892]    [0.400, 0.00818]
+#
+#   Medium-size avalanches (25000 m3 <= V < 60000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.240, 0.00392]    [0.220, 0.00338]    [0.200, 0.00302]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.260, 0.00561]    [0.240, 0.00467]    [0.225, 0.00392]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.310, 0.00727]    [0.295, 0.00561]    [0.280, 0.00641]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.390, 0.00892]    [0.360, 0.00818]    [0.350, 0.00727]
+#
+#   Large avalanches       (V >= 60000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.200, 0.00327]    [0.180, 0.00280]    [0.160, 0.00245]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.220, 0.00491]    [0.200, 0.00392]    [0.180, 0.00327]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.270, 0.00654]    [0.250, 0.00561]    [0.235, 0.00491]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.345, 0.00818]    [0.325, 0.00727]    [0.300, 0.00654]
+#
+#
+# Return period T = 30 y
+#
+#   Tiny avalanches        (V < 5000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.290, 0.00654]    [0.280, 0.00613]    [0.270, 0.00561]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.320, 0.00785]    [0.300, 0.00701]    [0.285, 0.00654]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.360, 0.00934]    [0.345, 0.00831]    [0.330, 0.00785]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.460, 0.01090]    [0.450, 0.00981]    [0.440, 0.00934]
+#
+#   Small avalanches       (5000 m3 <= V < 25000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.260, 0.00491]    [0.245, 0.00436]    [0.230, 0.00392]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.285, 0.00654]    [0.265, 0.00561]    [0.250, 0.00491]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.330, 0.00818]    [0.315, 0.00727]    [0.300, 0.00654]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.420, 0.00981]    [0.400, 0.00892]    [0.390, 0.00818]
+#
+#   Medium-size avalanches (25000 m3 <= V < 60000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.230, 0.00392]    [0.210, 0.00338]    [0.190, 0.00302]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.250, 0.00561]    [0.230, 0.00467]    [0.215, 0.00392]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.300, 0.00727]    [0.285, 0.00641]    [0.270, 0.00561]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.380, 0.00892]    [0.355, 0.00818]    [0.340, 0.00727]
+#
+#   Large avalanches       (V >= 60000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.190, 0.00327]    [0.170, 0.00280]    [0.155, 0.00245]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.210, 0.00491]    [0.190, 0.00392]    [0.170, 0.00327]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.260, 0.00654]    [0.240, 0.00561]    [0.225, 0.00491]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.330, 0.00818]    [0.310, 0.00727]    [0.290, 0.00654]
+#
+#
+# Return period T = 100 y
+#
+#   Tiny avalanches        (V < 5000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.285, 0.00654]    [0.275, 0.00613]    [0.265, 0.00561]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.300, 0.00785]    [0.290, 0.00701]    [0.275, 0.00654]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.310, 0.00934]    [0.295, 0.00831]    [0.280, 0.00785]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.450, 0.01090]    [0.440, 0.00981]    [0.430, 0.00934]
+#
+#   Small avalanches       (5000 m3 <= V < 25000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.255, 0.00491]    [0.240, 0.00436]    [0.225, 0.00392]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.275, 0.00654]    [0.260, 0.00561]    [0.245, 0.00491]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.320, 0.00818]    [0.310, 0.00727]    [0.290, 0.00654]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.410, 0.00981]    [0.390, 0.00892]    [0.380, 0.00818]
+#
+#   Medium-size avalanches (25000 m3 <= V < 60000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.220, 0.00392]    [0.200, 0.00338]    [0.180, 0.00302]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.240, 0.00561]    [0.220, 0.00467]    [0.205, 0.00392]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.290, 0.00727]    [0.280, 0.00641]    [0.260, 0.00561]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.370, 0.00892]    [0.340, 0.00818]    [0.330, 0.00727]
+#
+#   Large avalanches       (V >= 60000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.180, 0.00327]    [0.160, 0.00280]    [0.150, 0.00245]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.200, 0.00491]    [0.180, 0.00392]    [0.165, 0.00327]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.250, 0.00654]    [0.230, 0.00561]    [0.220, 0.00491]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.315, 0.00818]    [0.300, 0.00727]    [0.280, 0.00654]       
+#
+#
+# Return period T = 300 y
+#
+#   Tiny avalanches        (V < 5000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.280, 0.00654]    [0.270, 0.00613]    [0.260, 0.00561]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.300, 0.00785]    [0.290, 0.00701]    [0.275, 0.00654]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.340, 0.00934]    [0.330, 0.00831]    [0.310, 0.00785]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.440, 0.01090]    [0.430, 0.00981]    [0.420, 0.00934]
+#
+#   Small avalanches       (5000 m3 <= V < 25000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.245, 0.00491]    [0.230, 0.00436]    [0.215, 0.00392]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.265, 0.00654]    [0.250, 0.00561]    [0.235, 0.00491]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.310, 0.00818]    [0.300, 0.00727]    [0.280, 0.00654]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.400, 0.00981]    [0.380, 0.00892]    [0.370, 0.00818]
+#
+#   Medium-size avalanches (25000 m3 <= V < 60000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.210, 0.00392]    [0.190, 0.00338]    [0.170, 0.00302]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.230, 0.00561]    [0.210, 0.00467]    [0.195, 0.00392]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.280, 0.00727]    [0.270, 0.00561]    [0.250, 0.00641]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.360, 0.00892]    [0.330, 0.00818]    [0.320, 0.00727]
+#
+#   Large avalanches       (V >= 60000 m3):
+#       Flat or convex slope:
+#           Altitude classes 1, 2, 3:
+            [0.170, 0.00327]    [0.150, 0.00280]    [0.140, 0.00245]
+#       Non-channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.190, 0.00491]    [0.170, 0.00392]    [0.155, 0.00327]
+#       Channelized slope:
+#           Altitude classes 1, 2, 3:
+            [0.240, 0.00654]    [0.220, 0.00561]    [0.210, 0.00491]
+#       Gully:
+#           Altitude classes 1, 2, 3:
+            [0.300, 0.00818]    [0.285, 0.00727]    [0.270, 0.00654]        

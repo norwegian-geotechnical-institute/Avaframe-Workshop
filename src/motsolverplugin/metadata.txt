@@ -1,0 +1,10 @@
+[general]
+name=ASTRA Plugin
+description=Run ASTRA through QGIS
+version=1.0
+qgisMinimumVersion=3.0
+author=Callum Tregaskis
+email=callum.tregaskis@ngi.no
+about=A demo plugin to link ASTRA - RasterOps to QGIS raster layers
+category=Raster
+

@@ -1,0 +1,88 @@
+# =============================================================================
+# General
+# =============================================================================
+
+# MacOS
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+*.icloud
+
+# Windows
+*Thumbs.db
+*ehthumbs.db
+*Desktop.ini
+
+# Linux
+*~
+
+# Editor files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+
+# =============================================================================
+# Python
+# =============================================================================
+
+# Compiled files
+*__pycache__/
+*.py[cod]
+*$py.class
+
+# Poetry virtual environment and lock files (if not checked in)
+*.poetry/
+*.venv/
+*poetry.lock
+
+# Development extras
+.coverage
+.pytest_cache/
+.ruff_cache/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Test cache
+.pytest_cache/
+
+# VSCode settings (if present)
+.vscode/
+
+# =============================================================================
+# C / C++ (Make / CMake / Binary Artifacts)
+# =============================================================================
+
+# Build artifacts
+**/build/
+**/Build/
+**/build-*/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/compile_commands.json
+**/*.o
+**/*.obj
+**/*.so
+**/*.a
+**/*.out
+**/*.dll
+**/*.dylib
+
+# =============================================================================
+# Docs
+# =============================================================================
+
+**/docs/html/
+**/docs/latex/
+
+
+# =============================================================================
+# Project Specific - Ignore build and results directories recursively
+# =============================================================================
+
+
+
+

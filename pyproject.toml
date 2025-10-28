@@ -1,0 +1,22 @@
+[project]
+name = "ASTRA_QGIS_Plugins"
+version = "1.0.0"
+description = "QGIS Plugin utilising various ASTRA tools for preprocessing rasters for use alongside AvaFrame"
+authors = [
+    {name = "Callum Tregaskis", email = "callum.tregaskis@ngi.no"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "avaframe (==2.0a3)",
+    "scikit-image (>=0.25.2,<0.26.0)",
+    "perlin-noise (>=1.14,<2.0)",
+    "opencv-python-headless (<4.9)",
+]
+package-mode = false
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
