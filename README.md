@@ -171,6 +171,15 @@ chmod +x qgis-poetry.sh
 
 This will open QGIS with the specific dependencies for Avaframe and the preprocessing tools exposed so the plugin can use them.
 
+For ease of future use you can make an alias to this script which will make a global command to open QGIS from the terminal. Edit the following line to where you have installed the project. If using zsh on mac swap to .zshrc as appropriate. 
+
+```bash
+echo "alias avaframeQGIS='<path to script>/qgis-poetry.sh'" >> ~/.bashrc
+```
+
+The command `avaframeQGIS` will then open QGIS with the avaframe requirements whenever you need it.
+
+
 ___
 
 ## Installing the Avaframe and RasterOps Plugins
@@ -193,7 +202,7 @@ Now both plugin will be installed and able to run.
 ## Using the Plugins
 
 
-### Avaframe
+### Avaframe
 
 Load any layers you wish to manipulate into QGIS (drag and drop files into the staging area).
 
@@ -218,3 +227,8 @@ Click the `RasterOps` button in the top menu.
 - Hit Run
 
 Your processed raster results will appear in the staging area.
+
+
+#### Recipes
+
+The tool is designed such that general operations are available at top level but specific "recipes" (combinations of operations that are likely more frequently used or more complex operations than simple raster combinations e.g. calculating variable friction parameters for the terrain or combining forest data files into the correct format and scale) are stored under the recipes subheading. This allows us to write specific more complex routines which can take in - process and return rasters. 
