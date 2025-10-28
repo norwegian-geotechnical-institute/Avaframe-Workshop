@@ -28,13 +28,12 @@ Run `osgeo4w-setup.exe`, located by default in `C:\OSGeo4W\bin`.
 - Check whether `pip` is installed; if not, mark it for installation.
 - Complete the installation.  
 
-([See here](https://gis.stackexchange.com/questions/307850/osgeo4w-checking-gdal-version-with-gdalinfo-version-returns-nothing) for additional info and
-images if the above is not clear.)
+([See here](https://gis.stackexchange.com/questions/307850/osgeo4w-checking-gdal-version-with-gdalinfo-version-returns-nothing) or `Install/QGIS_Avaframe_MoT.docx` for additional info and images if the above is not clear.)
+
 
 __Linux__
 
-To check which version of gdal is on the system (and that the
-development tools are in place) use
+To check which version of gdal is on the system (and that the development tools are in place) use
 
 ```bash
 sudo apt install gdal-bin libgdal-dev python3-gdal qgis
@@ -56,7 +55,7 @@ To install `homebrew`, open _Terminal_ and use the following command
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-We then install gdal and QGIS with
+We then install GDAL and QGIS with
 
 ```bash
 brew install gdal qgis
@@ -70,9 +69,13 @@ gdal-config --version
 
 ---
 
-## Opening QGIS with additional python packages
+## Install Dependencies
 
-For the plugin to work we need to open QGIS with additional packages installed. Firstly we need to tell python which version of GDAL is installed on your system. To do this edit the line in `requirements.txt` so it matches the version of GDAL installed i.e. if your GDAL is 3.11.3 then change the line
+For Avaframe to work we need to open QGIS with additional packages installed so the python inside QGIS can use them. 
+
+### requirements.txt
+
+Firstly we need to tell python which version of GDAL is installed on your system. To do this edit the line in `requirements.txt` so it matches the version of GDAL installed i.e. if your GDAL is 3.11.3 then change the line
 
 ```text
 gdal==3.8.4 ; python_version >= "3.11" and python_version < "3.13"
@@ -89,10 +92,12 @@ gdal==3.11.3 ; python_version >= "3.11" and python_version < "3.13"
 Open the OSGEO4W shell. Run the following line
 
 ```powershell
-python -m pip install -r requirements.txt
+python -m pip install -r <path to project directory>\requirements.txt
 ```
 
-Now the python used by QGIS can use the installed packages. We can now open QGIS with the command
+This will install the dependencies for both Avaframe and the preprocessing tools. Now the python used by QGIS can access the installed packages.
+
+Next we can now open QGIS with the command
 
 ```powershell
 qgis
@@ -100,10 +105,37 @@ qgis
 
 ### Linux and Mac
 
-First, create an __isolated virtual environment__ for the project so that all required dependencies are installed locally and don’t interfere with your system Python.
+QGIS uses different python versions depending on whether you have opened it via the desktop or from an environment (e.g. from the terminal). To get around this and ensure that the packages are available for whichever python QGIS wants to use we need to expose the packages to our PATH variable.  
+
+If you know for sure which version of python QGIS is using on your system (you can check this through the python terminal within QGIS: `import sys; print(sys.executable)`). We can then install requirements directly to this python e.g. `/usr/bin/python3 -m pip install --force -r requirements.txt`. However, this is not recommended as it can break your system python and other packages may break due to the requirements for this package. 
+
+The workaround for this is to create an __isolated virtual environment__ for the project so that all required dependencies are installed locally and don’t interfere with your system Python. This happens in the OSGEO4W shell already in the Windows installation as the python QGIS uses is isolated there. For those on Linux and Mac we need to expose the packages to whichever python QGIS wants to use.
+
+
+__poetry__
+
+To install poetry we do (either using apt or brew)
 
 ```bash
-# Create a new virtual environment (named .venv)
+sudo apt install pipx
+pipx install poetry
+```
+
+Once poetry is installed you can simply type
+
+```bash
+poetry install --no-root
+```
+
+and all dependencies will be fetched into an environment for you.
+
+
+__Python std venv__
+
+If poetry is not available for you then we can do the following.
+Create a new virtual environment (named .venv)
+
+```bash
 python -m venv .venv
 ```
 
@@ -126,30 +158,58 @@ Finally, confirm that the installation worked by listing the installed packages:
 python -m pip list
 ```
 
-Now we can run the script `qgis-poetry.sh` which will expose the site-packages to QGIS so QGIS's python can use them
+
+#### Open QGIS with environment 
+
+
+Now we can run the script `qgis-poetry.sh` which will expose the site-packages in the virtual environment so any python QGIS is using can see them.
 
 ```bash
 chmod +x qgis-poetry.sh
 ./qgis-poetry.sh
 ```
 
-This will open QGIS with the specific dependencies for this project available so the plugin can use them.
+This will open QGIS with the specific dependencies for Avaframe and the preprocessing tools exposed so the plugin can use them.
 
-## Installing the Plugin
+___
 
-Open QGIS using the method descibed above. Install the pluging via
+## Installing the Avaframe and RasterOps Plugins
+
+Open QGIS using the method described above that works for you. Install the plugin via
 
 ```text
 QGIS top menu -> Plugins -> Manage and Install Plugins -> Install from ZIP
 ```
 
-Drag and drop the ZIP file `RasterOpsPlugin.zip` into the path and click install.
+Drag and drop the ZIP file `Install/RasterOpsPlugin.zip` into the path and click install.
 
-Now the plugin will be able to run the tools using additional dependencies to QGIS defaults.
 
-## Using the Plugin
+For Avaframe search for `Avaframe` from the install from Web tab. Click install.
 
-Load any layers you wish to manipulate into QGIS (drag and drop files into the stage area).
+Now both plugin will be installed and able to run.
+
+
+
+## Using the Plugins
+
+
+### Avaframe
+
+Load any layers you wish to manipulate into QGIS (drag and drop files into the staging area).
+
+Open the processing toolbox. Select the MoT Voellmy tool
+
+```text
+Avaframe - NGI_Experimental - MoTVoellmy (Com9)
+```
+
+In the popup menu select the options you wish and add relevant rasters then click run.
+Results will appear in the staging area.
+
+
+### RasterOps
+
+Load any layers you wish to manipulate into QGIS (drag and drop files into the staging area).
 
 Click the `RasterOps` button in the top menu.
 
@@ -157,4 +217,4 @@ Click the `RasterOps` button in the top menu.
 - Select relevant layers
 - Hit Run
 
-Your processed raster should appear in the staging area.
+Your processed raster results will appear in the staging area.

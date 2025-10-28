@@ -4,8 +4,8 @@
 
 Go to the following repositry
 
-```text
-http://www.github.com:NGI AvaFrameWS... 
+```url
+https://github.com/norwegian-geotechnical-institute/Avaframe-Workshop
 ```
 
 Download (or clone the repo) to your machine. 
