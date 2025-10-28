@@ -231,4 +231,4 @@ Your processed raster results will appear in the staging area.
 
 #### Recipes
 
-The tool is designed such that general operations are available at top level but specific "recipes" (combinations of operations that are likely more frequently used or more complex operations than simple raster combinations e.g. calculating variable friction parameters for the terrain or combining forest data files into the correct format and scale) are stored under the recipes subheading. This allows us to write specific more complex routines which can take in - process and return rasters. 
+The tool is designed such that general operations are available at top level but specific "recipes" (combinations of operations that are likely more frequently used or more complex operations than simple raster combinations e.g. calculating variable friction parameters for the terrain or combining forest data files into the correct format and scale) are stored under the recipes subheading. This allows us to write specific more complex routines which can take in, process and return rasters. 
